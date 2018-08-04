@@ -1,0 +1,15 @@
+[
+    {
+	"name": "4\" Polished basement floor",
+	"units": {
+	    "Radon rock": {
+		"formula": "= sqft * 6/12",
+		"inputs": ["sqft"]
+	    },
+	    "Concrete": {
+		"formula": "= sqft * 4/12",
+		"inputs": ["sqft"]
+	    }
+	}
+    }
+]

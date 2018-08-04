@@ -1,0 +1,99 @@
+[
+    {
+	"name": "Foot",
+	"plural_name": "Feet",
+	"symbol": "ft",
+	"system": "Imperial",
+	"category": "1d",
+	"category_type": "Space"
+    },
+    {
+	"name": "Foot squared",
+	"plural_name": "Feet squared",
+	"symbol": "ft&sup2;",
+	"system": "Imperial",
+	"category": "2d",
+	"category_type": "Space"
+    },
+    {
+	"name": "Foot cubed",
+	"plural_name": "Feet cubed",
+	"symbol": "ft&sup3;",
+	"system": "Imperial",
+	"category": "3d",
+	"category_type": "Space"
+    },
+    {
+	"name": "Metre",
+	"plural_name": "Metres",
+	"symbol": "m",
+	"system": "Metric",
+	"category": "1d",
+	"category_type": "Space"
+    },
+    {
+	"name": "Metre squared",
+	"plural_name": "Metres squared",
+	"symbol": "m&sup2;",
+	"system": "Metric",
+	"category": "2d",
+	"category_type": "Space"
+    },
+    {
+	"name": "Metre cubed",
+	"plural_name": "Metres cubed",
+	"symbol": "m&sup3;",
+	"system": "Metric",
+	"category": "3d",
+	"category_type": "Space"
+    },
+    {
+	"name": "Metre",
+	"plural_name": "Metres",
+	"symbol": "m",
+	"system": "Metric",
+	"category": "1d",
+	"category_type": "Space"
+    },
+    {
+	"name": "Metre squared",
+	"plural_name": "Metres squared",
+	"symbol": "m&sup2;",
+	"system": "Metric",
+	"category": "2d",
+	"category_type": "Space"
+    },
+    {
+	"name": "Metre cubed",
+	"plural_name": "Metres cubed",
+	"symbol": "m&sup3;",
+	"system": "Metric",
+	"category": "3d",
+	"category_type": "Space"
+    },
+    {
+	"name": "Ounce",
+	"plural_name": "Ounces",
+	"symbol": "oz",
+	"system": "Imperial",
+	"category": "Weight",
+	"category_type": "Mass"
+    },
+    {
+	"name": "Pound",
+	"symbol": "lb",
+	"plural_name": "Pounds",
+	"plural_symbol": "lbs",
+	"system": "Imperial",
+	"category": "Weight",
+	"category_type": "Mass"
+    },
+    {
+	"name": "Kilogram",
+	"symbol": "kg",
+	"plural_name": "Kilograms",
+	"system": "Metric",
+	"category": "Weight",
+	"category_type": "Mass"
+    }
+]

@@ -1,0 +1,87 @@
+[
+    {
+	"name": "Gravel",
+	"symbol": "ft&sup3;",
+	"phase": "Prep"
+    },
+    {
+	"name": "Radon rock",
+	"symbol": "ft&sup3;",
+	"phase": "Prep"
+    },
+    {
+	"name": "Forms",
+	"symbol": "ft",
+	"phase": "Prep"
+    },
+    {
+	"name": "Styro",
+	"symbol": "ft&sup2;",
+	"phase": "Prep"
+    },
+    {
+	"name": "Poly",
+	"symbol": "ft&sup2;",
+	"phase": "Prep"
+    },
+    {
+	"name": "Wiremesh",
+	"symbol": "ft&sup2;",
+	"phase": "Prep"
+    },
+    {
+	"name": "Rebar",
+	"symbol": "ft",
+	"phase": "Prep"
+    },
+    {
+	"name": "Wooden ladder",
+	"symbol": "ft",
+	"phase": "Prep"
+    },
+    {
+	"name": "Skid steer",
+	"symbol": "ft&sup3;",
+	"phase": "Prep"
+    },
+    {
+	"name": "Trough drain",
+	"symbol": "ft",
+	"phase": "Prep"
+    },
+    {
+	"name": "Concrete",
+	"symbol": "ft&sup3;",
+	"phase": "Place & Finish"
+    },
+    {
+	"name": "Broomed",
+	"symbol": "ft&sup2;",
+	"phase": "Place & Finish"
+    },
+    {
+	"name": "Exposed",
+	"symbol": "ft&sup2;",
+	"phase": "Place & Finish"
+    },
+    {
+	"name": "Stamped",
+	"symbol": "ft&sup2;",
+	"phase": "Place & Finish"
+    },
+    {
+	"name": "Sawcuts",
+	"symbol": "ft",
+	"phase": "Finish & Cleanup"
+    },
+    {
+	"name": "Cure & seal",
+	"symbol": "ft&sup2;",
+	"phase": "Finish & Cleanup"
+    },
+    {
+	"name": "Stain",
+	"symbol": "ft&sup2;",
+	"phase": "Finish & Cleanup"
+    }
+]

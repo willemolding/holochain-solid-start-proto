@@ -1,0 +1,99 @@
+{
+    "Tests": [
+        {
+            "Convey": "Write a measurement unit",
+            "Zome": "ProductsServices",
+            "FnName": "write",
+            "Input": {
+		"entryType": "MU",
+		"entry": {
+		    "name": "Foot",
+		    "plural_name": "Feet",
+		    "symbol": "ft",
+		    "system": "Metric",
+		    "category": "1d",
+		    "category_type": "space"
+		}
+            },
+            "Output": "%h%",
+            "Exposure": "public"
+        },
+        {
+            "Convey": "Update last measurement unit",
+            "Zome": "ProductsServices",
+            "FnName": "updateItem",
+            "Input": {
+		"entryType": "MU",
+		"hash": "%h%",
+		"entry": {
+		    "name": "Foot",
+		    "plural_name": "Feet",
+		    "symbol": "ft",
+		    "system": "Imperial",
+		    "category": "1d",
+		    "category_type": "space"
+		}
+	    },
+            "Regexp": "{.*}",
+            "Exposure": "public"
+        },
+        {
+            "Convey": "Remove last measurement unit",
+            "Zome": "ProductsServices",
+            "FnName": "archive",
+            "Input": {
+		"entryType": "MU",
+		"hash": "%h%"
+	    },
+            "Output": "%h%",
+            "Exposure": "public"
+        },
+        {
+            "Convey": "Test restruct",
+            "Zome": "Restruct",
+            "FnName": "restruct",
+            "Input": {
+		"data": {
+		    "Hash": "QmSa8qrRB9WrfeXYdmLQN6HJ23vASjXa8q3u9HZyn3iQSy",
+		    "Entry": {
+			"name": "Foot",
+			"plural_name": "Feet",
+			"symbol": "ft",
+			"system": "Imperial",
+			"category": "1d",
+			"category_type": "space"
+		    }
+		},
+		"struct": {
+		    "hash": "< Hash",
+		    "name": "< Entry.name",
+		    "symbol": "< Entry.symbol",
+		    "system": "< Entry.system",
+		    "plurals": {
+			"name": "< Entry.plural_name",
+			"symbol": "= this.Entry.plural_symbol || this.Entry.symbol"
+		    },
+		    "category": {
+			"name": "< Entry.category",
+			"type": "< Entry.category_type"
+		    }
+		}
+	    },
+            "Output": {
+		"hash": "QmSa8qrRB9WrfeXYdmLQN6HJ23vASjXa8q3u9HZyn3iQSy",
+		"name": "Foot",
+		"symbol": "ft",
+		"system": "Imperial",
+		"plurals": {
+		    "name": "Feet",
+		    "symbol": "ft"
+		},
+		"category": {
+		    "name": "1d",
+		    "type": "space"
+		}
+	    },
+            "Exposure": "public"
+        }
+    ]
+}

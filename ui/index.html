@@ -1,0 +1,53 @@
+<html>
+    <head>
+	<title>Solid Start</title>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+    </head>
+    <body>
+
+	<!-- As a heading -->
+	<nav class="navbar navbar-light bg-light">
+	    <span class="navbar-brand mb-0 h1">Solid Start</span>
+	</nav>
+
+	<div class="container">
+	    <br>
+	    <div id="listStories"
+		 class="row">
+		
+		<div class="col-6" v-for="system in systems">
+		    <h3>{{ system }}
+			<button class="btn btn-light btn-sm"
+				v-on:click="refresh">Refresh</button>
+		    </h3>
+		    <div v-for="ctype in measurementUnits" class="pl-5">
+			<h3>{{ ctype.name }}</h3>
+			
+			<div v-for="category in ctype.categories" class="pl-5">
+			    <h4>{{ category.name }}</h4>
+			    
+			    <ul class="list-group">
+				<li v-for="unit in category.systems[system].units"
+				    class="list-group-item">
+				    {{ unit.name }} (<span v-html="unit.symbol"></span>)
+				</li>
+			    </ul>
+			</div>
+			<hr>
+		    </div>
+		</div>
+		
+	    </div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+	<!-- <script src="https://cdn.jsdelivr.net/npm/vue-router"></script> -->
+
+	<script type="text/javascript" src="app.js" ></script>
+    </body>
+</html>

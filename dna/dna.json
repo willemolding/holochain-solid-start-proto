@@ -1,0 +1,252 @@
+{
+    "Version": 1,
+    "UUID": "00000000-0000-0000-0000-000000000000",
+    "Name": "Magoo",
+    "Properties": {
+        "description": "Decentralized SCRUM",
+        "language": "en"
+    },
+    "BasedOn": "",
+    "RequiresVersion": 26,
+    "DHTConfig": {
+        "HashType": "sha2-256",
+        "RedundancyFactor": 0
+    },
+    "Progenitor": {
+        "Identity": "",
+        "PubKey": null
+    },
+    "Zomes": [
+        {
+            "Name": "codeLibrary",
+            "Description": "Helper functions used by other zomes",
+            "CodeFile": "lib.js",
+            "RibosomeType": "js",
+            "BridgeFuncs": null,
+            "Config": null,
+            "Functions": [
+                {
+                    "Name": "guid",
+                    "CallingType": "string",
+		    "Exposure": "public"
+                },
+                {
+                    "Name": "is_dict",
+                    "CallingType": "json",
+		    "Exposure": "public"
+                },
+                {
+                    "Name": "update_object",
+                    "CallingType": "json",
+		    "Exposure": "public"
+                },
+                {
+                    "Name": "getAllEntries",
+                    "CallingType": "json",
+		    "Exposure": "public"
+                }
+            ]
+        },
+        {
+            "Name": "Restruct",
+            "Description": "Restruct library",
+            "CodeFile": "lib.js",
+            "RibosomeType": "js",
+            "BridgeFuncs": null,
+            "Config": null,
+            "Functions": [
+                {
+                    "Name": "restruct",
+                    "CallingType": "json",
+		    "Exposure": "public"
+                }
+            ]
+        },
+        {
+            "Name": "ProductsServices",
+            "Description": "Manage the products and services library",
+            "CodeFile": "zome.js",
+            "RibosomeType": "js",
+            "BridgeFuncs": null,
+            "Config": null,
+            "Entries": [
+                {
+                    "Name": "measurement_unit",
+                    "DataFormat": "json",
+                    "Sharing": "public"
+                },
+                {
+                    "Name": "base_unit",
+                    "DataFormat": "json",
+                    "Sharing": "public"
+                },
+                {
+                    "Name": "price_sheet",
+                    "DataFormat": "json",
+                    "Sharing": "public"
+                },
+                {
+                    "Name": "price_sheet_unit",
+                    "DataFormat": "json",
+                    "Sharing": "public"
+                },
+                {
+                    "Name": "product_service",
+                    "DataFormat": "json",
+                    "Sharing": "public"
+                },
+                {
+                    "Name": "product_service_units",
+                    "DataFormat": "json",
+                    "Sharing": "public"
+                },
+		
+                {
+                    "Name": "base_unit_to_measurement_unit",
+                    "DataFormat": "links",
+                    "Sharing": "public"
+                },
+                {
+                    "Name": "price_sheet_unit_to_price_sheet",
+                    "DataFormat": "links",
+                    "Sharing": "public"
+                },
+                {
+                    "Name": "price_sheet_unit_to_base_unit",
+                    "DataFormat": "links",
+                    "Sharing": "public"
+                },
+                {
+                    "Name": "product_service_unit_to_product_service",
+                    "DataFormat": "links",
+                    "Sharing": "public"
+                },
+                {
+                    "Name": "product_service_unit_to_base_unit",
+                    "DataFormat": "links",
+                    "Sharing": "public"
+                }
+            ],
+            "Functions": [
+                {
+                    "Name": "write",
+                    "CallingType": "json",
+		    "Exposure": "public"
+                },
+                {
+                    "Name": "add_base_unit",
+                    "CallingType": "json",
+		    "Exposure": "public"
+                },
+                {
+                    "Name": "add_price_sheet",
+                    "CallingType": "json",
+		    "Exposure": "public"
+                },
+                {
+                    "Name": "add_price_sheet_unit",
+                    "CallingType": "json",
+		    "Exposure": "public"
+                },
+                {
+                    "Name": "add_product_service",
+                    "CallingType": "json",
+		    "Exposure": "public"
+                },
+                {
+                    "Name": "add_product_service_unit",
+                    "CallingType": "json",
+		    "Exposure": "public"
+                },
+                {
+                    "Name": "getAll",
+                    "CallingType": "json",
+		    "Exposure": "public"
+                },
+                {
+                    "Name": "getAllProducts",
+                    "CallingType": "json",
+		    "Exposure": "public"
+                },
+                {
+                    "Name": "getSingle",
+                    "CallingType": "json",
+		    "Exposure": "public"
+                },
+                {
+                    "Name": "updateItem",
+                    "CallingType": "json",
+		    "Exposure": "public"
+                },
+                {
+                    "Name": "archive",
+                    "CallingType": "json",
+		    "Exposure": "public"
+                }
+            ]
+        },
+        {
+            "Name": "Quotes",
+            "Description": "Manage job quotes",
+            "CodeFile": "zome.js",
+            "RibosomeType": "js",
+            "BridgeFuncs": null,
+            "Config": null,
+            "Entries": [
+                {
+                    "Name": "quote_sections",
+                    "DataFormat": "json",
+                    "Sharing": "public"
+                },
+                {
+                    "Name": "quote_section_items",
+                    "DataFormat": "json",
+                    "Sharing": "public"
+                },
+		
+                {
+                    "Name": "quote_section_item_to_quote_section",
+                    "DataFormat": "links",
+                    "Sharing": "public"
+                },
+                {
+                    "Name": "quote_section_item_to_product_service",
+                    "DataFormat": "links",
+                    "Sharing": "public"
+                }
+            ],
+            "Functions": [
+                {
+                    "Name": "write",
+                    "CallingType": "json",
+		    "Exposure": "public"
+                },
+                {
+                    "Name": "getAll",
+                    "CallingType": "json",
+		    "Exposure": "public"
+                },
+                {
+                    "Name": "getAllForStory",
+                    "CallingType": "json",
+		    "Exposure": "public"
+                },
+                {
+                    "Name": "getSingle",
+                    "CallingType": "json",
+		    "Exposure": "public"
+                },
+                {
+                    "Name": "updateItem",
+                    "CallingType": "json",
+		    "Exposure": "public"
+                },
+                {
+                    "Name": "archive",
+                    "CallingType": "json",
+		    "Exposure": "public"
+                }
+            ]
+        }
+    ]
+}
